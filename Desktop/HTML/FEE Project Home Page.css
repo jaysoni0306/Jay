@@ -1,0 +1,167 @@
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+.hero {
+    background-image: url(Banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: azure;
+    text-align: end;
+    padding: 150px 0;
+    height: 300px;
+    
+}
+.hero-content{
+    align-items: baseline;
+    margin-right: 50px;
+}
+header {
+    background-color: white;
+    padding: 20px ;
+    margin: px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 35px;
+}
+.logo h1 {
+    font-size: 30px;
+    color: #333;
+}
+.nav-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.viewmenu{
+    display: inline-block;
+    background-color: orangered;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.menu {
+    text-align: center;
+    padding: 50px 0;
+}
+.menu h2 {
+    font-size: 32px;
+    color: #333;
+}
+.menu-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
+    padding:20px;
+    border-radius: 50px;
+}
+.menu-option {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    display: inline-block;
+    max-width: 200px;
+    border-radius: 50%;
+}
+.menu-option img {
+    width: 100%;
+    border-radius: 80px;
+}
+.menu-option h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.menu-item {
+    margin: 30px;
+    display: inline-block;
+    text-align: left;
+    max-width: 300px;
+    text-decoration: none;
+    color: #333;
+}
+.menu-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+.menu-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.menu-item p {
+    font-size: 16px;
+    color: #777;
+}
+.menu-item .price {
+    font-size: 18px;
+    color: #ff8c42;
+    font-weight: bold;
+    display: block;
+}
+.recommendations {
+    text-align: center;
+    padding: 50px 0;
+}
+.recommendations h2 {
+    font-size: 32px;
+    color: #333;
+}
+.recommendation-item {
+    margin: 10px;
+    display: inline-block;
+    text-align: left;
+    max-width: 300px;
+    text-decoration: none;
+    color: #333;
+}
+.recommendation-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+.recommendation-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.recommendation-item p {
+    font-size: 16px;
+    color: #777;
+}
+.recommendation-item .price {
+    font-size: 18px;
+    color: #ff8c42;
+    font-weight: bold;
+    display: block;
+}
+.about, .contact {
+    text-align: center;
+    padding: 50px 0;
+}
+.about h2, .contact h2 {
+    font-size: 32px;
+    color: #333;
+}
+.about p, .contact p {
+    font-size: 18px;
+    color: #777;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.contact address p a{
+    color:#777
+}
+

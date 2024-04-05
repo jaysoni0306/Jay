@@ -1,0 +1,68 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-style: unset;
+}
+body{
+    color: white;
+    background-color: teal;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    position: relative;
+    margin: 50px;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.container .left_side
+{
+    position: relative;
+    background:black;
+    padding: 50px;
+    min-height: 150vh;
+}
+.profiletext{
+    padding-top: px;
+    position: relative;
+    text-align: center;;
+    padding-bottom:px;
+    border-bottom: 1px solid;
+}
+.profiletext .imagebox
+{
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
+.education{
+    padding: 30px;
+}
+.contact{
+    padding: 30px;
+}
+.container .right_side
+{
+    position: relative;
+    background: grey;
+    padding: 40px;
+    min-height: 100vh;
+    overflow-y: scroll;
+}
+.about{
+    margin-bottom: 50px;
+}
+.CENTRE{
+    border: 1px;
+}
+

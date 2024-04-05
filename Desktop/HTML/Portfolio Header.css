@@ -1,0 +1,55 @@
+/* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color or image */
+body {
+    background: #f0f0f0 url('background.jpg') no-repeat center center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    +.
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+/* Style the navigation menu */
+nav {
+    background: #444;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Style the sections */
+section {
+    padding: 20px;
+}
+
+/* Customize other elements as needed */

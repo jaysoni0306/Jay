@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bean Voyage Cafe</title>
+        <style>.container {
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+          
+          .cart {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          }
+          
+          h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+          
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+          }
+          
+          li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+          }
+          
+          li:last-child {
+            border-bottom: none;
+          }
+          
+          button.btn-primary {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          
+          button.btn-primary:hover {
+            background-color: #444;
+          }
+          
+          button.btn-secondary {
+            background-color: #aaa;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          
+          button.btn-secondary:hover {
+            background-color: #bbb;
+          }</style>
+          <script>
+            // Get the cart items from the server
+fetch('/api/cart')
+  .then(response => response.json())
+  .then(data => {
+    // Populate the cart with the items
+    const cartItems = data.items;
+    const ul = document.querySelector('.cart ul');
+    cartItems.forEach(item => {
+      const li = document.createElement('li');
+      li.innerText = `${item.name} x ${item.quantity}`;
+      ul.appendChild(li);
+    });
+  })
+  .catch(error => console.error(error));
+
+// Update the cart button
+document.querySelector('.btn-primary').addEventListener('click', () => {
+  fetch('/api/cart/update', {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      items: cartItems.map(item => ({ ...item, quantity: item.quantity + 1 }))
+    })
+  })
+    .then(response => response.json())
+    .then(data => {
+      location.reload();
+    })
+    .catch(error => console.error(error));
+});
+
+// Clear the cart button
+document.querySelector('.btn-secondary').addEventListener('click', () => {
+  fetch('/api/cart/clear', { method: 'DELETE' })
+    .then(response => response.json())
+    .then(() => {
+      location.reload();
+    })
+    .catch(error => console.error(error));
+});
+          </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="cart">
+              <h2>Your Cart</h2>
+              <ul>
+                <!-- Display each item in the cart -->
+                {% for item in cart %}
+                  <li>{{ item.name }} x {{ item.quantity }}</li>
+                {% endfor %}
+              </ul>
+              <button class="btn btn-primary">Update Cart</button>
+              <button class="btn btn-secondary">Clear Cart</button>
+            </div>
+          </div>
+    </body>
+</html>

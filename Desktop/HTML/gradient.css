@@ -1,0 +1,12 @@
+.name
+{
+   background-image: repeating-linear-gradient(red 10% , green 20%);
+}
+.stream
+{
+   background-image: radial-gradient(closest-side , red  , yellow  , pink);
+}
+.password
+{
+   background-image: conic-gradient(red 45deg , yellow 90deg , green 75deg);
+}

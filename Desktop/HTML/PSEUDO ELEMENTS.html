@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+              ::selection{
+                color: brown;
+                background: yellow;
+              }
+              ::marker{
+                color: blue;
+              }
+              ::first-letter{
+                font-size: large;
+                color:pink;
+                font-size: 100px;
+              }
+              h1::before
+              {
+                content: url(images.jpg);
+                
+              }
+              p::after
+              {
+                content: url(images.jpg);
+              }
+              .div{
+                transform:translate(30px,50px)
+                rotate(50deg); 
+                transform: matrix()
+
+              }
+              
+        </style>
+    </head>
+    <body>
+        <div class="div">
+        <h1><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo quasi aspernatur dolorum pariatur
+             officiis accusantium, rerum suscipit ullam consequatur fugiat saepe mollitia enim possimus vero 
+             earum nulla blanditiis maiores libero.</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia tempore nulla, provident ipsam
+             ullam voluptates soluta ipsum non iure minima, deserunt quod doloremque eum cupiditate vitae.
+              Corrupti eos perspiciatis quibusdam.</p>  
+            </div>
+        <ul>
+            <li>css</li>
+            <li>js</li>
+            <li>html</li>
+        </ul>       
+        <ol>
+            <li>css</li>
+            <li>js</li>
+            <li>html</li>
+        </ol>  
+    </body>
+</html>
